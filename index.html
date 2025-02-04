@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet"
+type="text/css" />
+<script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.2.0">
+</script>
+
+<title>My Experiment</title>
+</head>
+<body>
+<!--You don't have to create content here. jsPsych will do it for
+you.-->
+</body>
+<script>
+    const jsPsych = initJsPsych();
+
+    const just_one_trial = {
+    type: jsPsychHtmlButtonResponse,
+    choices: ['Ok'],
+    stimulus: "Trial 1: Click Ok to end the experiment."
+};
+
+jsPsych.run([just_one_trial]);
+
+    </script>
+
+</html>
