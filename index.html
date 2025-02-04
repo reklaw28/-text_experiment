@@ -5,6 +5,7 @@
     <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet"
 type="text/css" />
 <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.2.0">
+    <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe@0.4"></script>
 </script>
 
 <title>My Experiment</title>
@@ -22,6 +23,15 @@ you.-->
     stimulus: "Trial 1: Click Ok to end the experiment."
 };
 
+
+const save_data = {
+                type: jsPsychPipe,
+                action: "save",
+                experiment_id: "xch2hnKYSTCA",
+                filename: filename,
+                data_string: ()=>jsPsych.data.get().csv()
+              };
+              
 jsPsych.run([just_one_trial]);
 
     </script>
